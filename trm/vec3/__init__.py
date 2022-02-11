@@ -116,13 +116,13 @@ class Vec3(object):
         """
         Returns Euclidean length of the vector
         """
-        return m.sqrt(self.sqnorm())
+        return math.sqrt(self.sqnorm())
 
     def unit(self):
         """
         Returns vector as a unit vector in same direction
         """
-        leng = m.sqrt(self.sqnorm())
+        leng = math.sqrt(self.sqnorm())
         if leng == 0.:
             raise ValueError("Vec3.unit: cannot make a unit vector from a zero vector")
         return self / leng
